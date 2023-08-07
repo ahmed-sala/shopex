@@ -28,12 +28,16 @@ class _ProductWidgetState extends State<ProductWidget> {
                 height: size.height * 0.22,
               ),
             ),
+            const SizedBox(
+              height: 15.0,
+            ),
             Row(
               children: [
                 Flexible(
                   flex: 5,
                   child: TitlesTextWidget(
                     label: "Title " * 10,
+                    maxLines: 2,
                   ),
                 ),
                 Flexible(
