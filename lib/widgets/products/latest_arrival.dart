@@ -1,4 +1,5 @@
 import 'package:ecomerce/consts/app_constants.dart';
+import 'package:ecomerce/screens/inner_screens/product_details.dart';
 import 'package:ecomerce/widgets/subtitle_text.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,9 @@ class LatestArrivalProductWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () async {
+          await Navigator.pushNamed(context, ProductDetail.routeName);
+        },
         child: SizedBox(
           width: size.width * 0.45,
           child: Row(
