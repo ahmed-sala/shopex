@@ -1,6 +1,7 @@
 import 'package:ecomerce/consts/theme_data.dart';
 import 'package:ecomerce/providers/theme_provider.dart';
 import 'package:ecomerce/root_screen.dart';
+import 'package:ecomerce/screens/inner_screens/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
           theme: Style.themeData(
               isDarkTheme: themeProvider.getIsDarkTheme, context: context),
           home: RootScreen(),
+          routes: {ProductDetail.routeName: (_) => const ProductDetail()},
         );
       }),
     );
